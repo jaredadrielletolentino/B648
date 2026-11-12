@@ -46,6 +46,33 @@ class Employee extends Person {
     }
 }
 
+// Stretch Goal: Student Subclass
+class Student extends Person {
+    constructor(firstName, lastName, studentID, section) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.studentID = studentID;
+        this.section = section;
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName} has student ID of ${this.studentID}`;
+    }
+
+    getFirstName() {
+        return `First Name: ${this.firstName}`;
+    }
+
+    getLastName() {
+        return `Last Name: ${this.lastName}`;
+    }
+
+    getStudentDetails() {
+        return `${this.firstName} ${this.lastName} has student ID of ${this.studentID} and belongs to section ${this.section}`;
+    }
+}
+
 class Vehicle {
     constructor(make, model) {
         this.make = make;
@@ -85,3 +112,8 @@ const myTruck = new Truck("Tesla", "Cyber Truck", "5000 lbs");
 myCar.drive();
 myTruck.drive();
 
+const student1 = new Student("Jane", "Doe", "S12345", "A");
+console.log(student1.getFullName());
+console.log(student1.getFirstName());
+console.log(student1.getLastName());
+console.log(student1.getStudentDetails());
